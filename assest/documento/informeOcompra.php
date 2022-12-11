@@ -9,8 +9,8 @@ include_once '../../assest/controlador/TEMPORADA_ADO.php';
 
 include_once '../../assest/controlador/RESPONSABLE_ADO.php';
 include_once '../../assest/controlador/PROVEEDOR_ADO.php';
-include_once '../../assest/controlador/FPAGO_ADO.php';
-include_once '../../assest/controlador/TMONEDA_ADO.php';
+include_once '../../assest/controlador/FPAGOM_ADO.php';
+include_once '../../assest/controlador/TMONEDAM_ADO.php';
 include_once '../../assest/controlador/PRODUCTO_ADO.php';
 include_once '../../assest/controlador/TUMEDIDA_ADO.php';
 include_once '../../assest/controlador/CIUDAD_ADO.php';
@@ -32,8 +32,8 @@ $TEMPORADA_ADO =  new TEMPORADA_ADO();
 
 $RESPONSABLE_ADO =  new RESPONSABLE_ADO();
 $PROVEEDOR_ADO =  new PROVEEDOR_ADO();
-$FPAGO_ADO =  new FPAGO_ADO();
-$TMONEDA_ADO =  new TMONEDA_ADO();
+$FPAGOM_ADO =  new FPAGOM_ADO();
+$TMONEDAM_ADO =  new TMONEDAM_ADO();
 $PRODUCTO_ADO =  new PRODUCTO_ADO();
 $TUMEDIDA_ADO =  new TUMEDIDA_ADO();
 $COMUNA_ADO =  new COMUNA_ADO();
@@ -104,11 +104,11 @@ if ($ARRAYOCOMPRA) {
 
 
 
-  $ARRAYTMONEDA = $TMONEDA_ADO->verTmoneda($ARRAYOCOMPRA[0]["ID_TMONEDA"]);
+  $ARRAYTMONEDA = $TMONEDAM_ADO->verTmoneda($ARRAYOCOMPRA[0]["ID_TMONEDA"]);
   if ($ARRAYTMONEDA) {
     $NOMBRETMONEDA = $ARRAYTMONEDA[0]["NOMBRE_TMONEDA"];
   }
-  $ARRAYFPAGO = $FPAGO_ADO->verFpago($ARRAYOCOMPRA[0]["ID_FPAGO"]);
+  $ARRAYFPAGO = $FPAGOM_ADO->verFpago($ARRAYOCOMPRA[0]["ID_FPAGO"]);
   if ($ARRAYFPAGO) {
     $NOMBREFPAGO = $ARRAYFPAGO[0]["NOMBRE_FPAGO"];
   }
@@ -298,7 +298,6 @@ $html = $html . '
             <td class="color2 left">' . $EMAILPROVEEDOR . ' </td>
         </tr> 
         <tr> 
-           <th colspan="4" class="center">DATOS DE PROVEEDOR.</th>
         </tr>
       </table>
 

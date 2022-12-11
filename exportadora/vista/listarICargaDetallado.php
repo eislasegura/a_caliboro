@@ -274,6 +274,8 @@ include_once "../../assest/config/datosUrLP.php";
                                                         <th>Semana Real ETA</th>                                            
                                                         <th>Empresa</th>
                                                         <th>Temporada</th>
+                                                        <th>Puerto de Carga</th>
+                                                        <th>Puerto Destino</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -557,6 +559,8 @@ include_once "../../assest/config/datosUrLP.php";
                                                                 <td> <?php echo $r['SEMANAETAREAL']; ?> </td>
                                                                 <td> <?php echo $NOMBREEMPRESA; ?></td>
                                                                 <td> <?php echo $NOMBRETEMPORADA; ?></td>
+                                                                <td> <?php echo $r['NOMBRE_PCARGA']; ?> </td>
+                                                                <td> <?php echo $r['NOMBRE_PDESTINO']; ?> </td>
                                                             </tr>
                                                         <?php endforeach; ?>
                                                     <?php endforeach; ?>
